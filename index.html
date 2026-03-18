@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Abhishek Sharma — CX Strategy &amp; Experience Transformation | ScaleWithSignals.com</title>
+<meta name="description" content="Abhishek Sharma is a VP-level CX Strategy and Experience Transformation leader with 12+ years across the US, India, and Germany. Creator of the Signals to Systems to Scale framework. Available for VP/Director roles and consulting engagements in financial services and enterprise technology." />
+<meta name="author" content="Abhishek Sharma" />
+<meta name="keywords" content="CX strategy, customer experience, voice of customer, digital transformation, experience management consulting, VoC, NPS, financial services CX, AI-enabled CX, Signals Systems Scale" />
+<meta property="og:title" content="Abhishek Sharma — CX Strategy &amp; Experience Transformation" />
+<meta property="og:description" content="Creator of Signals to Systems to Scale. 12+ years driving CX transformation across $400M digital ecosystems. Available for VP/Director roles and consulting." />
+<meta property="og:url" content="https://www.scalewithsignals.com" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="ScaleWithSignals.com" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Abhishek Sharma — CX Strategy &amp; Experience Transformation" />
+<meta name="twitter:description" content="Creator of Signals to Systems to Scale. CX Strategy and Experience Transformation leader available for leadership roles and consulting." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink: #0d0d0d;
+    --paper: #f7f5f0;
+    --cream: #ede9e0;
+    --gold: #b8953a;
+    --gold-light: #d4af6a;
+    --steel: #3a4a5c;
+    --mist: #8a9aaa;
+    --rule: rgba(13,13,13,0.10);
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'DM Sans', sans-serif;
+    --mono: 'DM Mono', monospace;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.6; overflow-x: hidden; }
+  body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E"); pointer-events: none; z-index: 1000; opacity: 0.4; }
+
+  /* NAV */
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 4rem; background: rgba(247,245,240,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--rule); }
+  .nav-logo { font-family: var(--serif); font-size: 1.1rem; font-weight: 600; letter-spacing: 0.02em; color: var(--ink); text-decoration: none; }
+  .nav-logo span { color: var(--gold); }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--steel); text-decoration: none; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-cta { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--paper); background: var(--ink); border: none; padding: 0.6rem 1.4rem; cursor: pointer; text-decoration: none; transition: background 0.2s; display: inline-block; }
+  .nav-cta:hover { background: var(--gold); }
+
+  /* HERO */
+  .hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; padding-top: 80px; overflow: hidden; }
+  .hero-left { display: flex; flex-direction: column; justify-content: center; padding: 6rem 4rem; position: relative; z-index: 2; }
+  .hero-eyebrow { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.8rem; }
+  .hero-eyebrow::before { content: ''; display: block; width: 32px; height: 1px; background: var(--gold); }
+  .hero-name { font-family: var(--serif); font-size: clamp(3.5rem, 6vw, 5.5rem); font-weight: 300; line-height: 1.05; color: var(--ink); margin-bottom: 1rem; }
+  .hero-name em { font-style: italic; color: var(--gold); }
+  .hero-title { font-family: var(--serif); font-size: 1.2rem; font-weight: 300; color: var(--steel); margin-bottom: 2.5rem; line-height: 1.5; }
+  .hero-fw { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--ink); color: var(--paper); padding: 0.6rem 1.2rem; font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.08em; margin-bottom: 3rem; }
+  .hero-fw .arr { color: var(--gold); margin: 0 0.2rem; }
+  .hero-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; padding-top: 2rem; border-top: 1px solid var(--rule); }
+  .stat-num { font-family: var(--serif); font-size: 2.2rem; font-weight: 600; color: var(--gold); line-height: 1; }
+  .stat-label { font-size: 0.72rem; color: var(--mist); margin-top: 0.3rem; text-transform: uppercase; letter-spacing: 0.08em; }
+  .hero-right { position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  .hero-right::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 60% 40%, rgba(184,149,58,0.12) 0%, transparent 70%), linear-gradient(135deg, var(--cream) 0%, var(--paper) 100%); }
+  .fw-card { position: relative; z-index: 2; background: white; border: 1px solid var(--rule); padding: 2rem; box-shadow: 0 20px 60px rgba(0,0,0,0.08); width: 290px; }
+  .fw-badge { position: absolute; top: -12px; right: -12px; background: var(--gold); color: white; font-family: var(--mono); font-size: 0.6rem; padding: 0.3rem 0.6rem; letter-spacing: 0.08em; }
+  .fw-card-title { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--mist); margin-bottom: 1.5rem; }
+  .fw-steps { display: flex; flex-direction: column; gap: 1rem; }
+  .fw-step { display: flex; align-items: flex-start; gap: 1rem; }
+  .fw-step-n { font-family: var(--serif); font-size: 2rem; font-weight: 300; color: rgba(184,149,58,0.3); line-height: 1; min-width: 2rem; }
+  .fw-step-t strong { display: block; font-family: var(--serif); font-size: 1.1rem; font-weight: 600; color: var(--ink); }
+  .fw-step-t span { font-size: 0.78rem; color: var(--mist); }
+  .fw-conn { width: 1px; height: 20px; background: var(--gold-light); margin-left: 3rem; opacity: 0.5; }
+
+  /* SECTIONS */
+  section { padding: 7rem 4rem; border-top: 1px solid var(--rule); }
+  .s-label { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1rem; }
+  .s-label::before { content: ''; display: block; width: 24px; height: 1px; background: var(--gold); }
+  .s-title { font-family: var(--serif); font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; line-height: 1.15; color: var(--ink); margin-bottom: 3.5rem; max-width: 700px; }
+  .s-title em { font-style: italic; color: var(--gold); }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+  .body-text { font-size: 1.05rem; line-height: 1.8; color: var(--steel); }
+  .body-text p + p { margin-top: 1.2rem; }
+  .pull-quote { font-family: var(--serif); font-size: 1.4rem; font-weight: 300; font-style: italic; color: var(--ink); line-height: 1.5; padding-left: 2rem; border-left: 2px solid var(--gold); margin: 2rem 0; }
+
+  /* CREDENTIALS */
+  .cred-list { list-style: none; display: flex; flex-direction: column; gap: 1rem; }
+  .cred-list li { display: flex; gap: 1rem; align-items: flex-start; padding-bottom: 1rem; border-bottom: 1px solid var(--rule); }
+  .cred-icon { width: 36px; height: 36px; background: var(--cream); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1rem; }
+  .cred-text strong { display: block; font-weight: 500; font-size: 0.88rem; color: var(--ink); }
+  .cred-text span { font-size: 0.78rem; color: var(--mist); }
+
+  /* PIVOT BANNER */
+  .pivot-banner { background: var(--ink); color: var(--paper); padding: 3rem 4rem; display: grid; grid-template-columns: auto 1fr; gap: 3rem; align-items: center; border-top: 1px solid rgba(255,255,255,0.05); }
+  .pivot-icon { font-family: var(--serif); font-size: 4rem; font-weight: 300; color: var(--gold); line-height: 1; }
+  .pivot-text h3 { font-family: var(--serif); font-size: 1.4rem; font-weight: 300; color: var(--paper); margin-bottom: 0.6rem; }
+  .pivot-text p { font-size: 0.9rem; color: rgba(247,245,240,0.65); line-height: 1.7; }
+
+  /* FRAMEWORK */
+  .fw-section { background: var(--ink); color: var(--paper); }
+  .fw-section .s-label { color: var(--gold-light); }
+  .fw-section .s-label::before { background: var(--gold-light); }
+  .fw-section .s-title { color: var(--paper); }
+  .fw-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; }
+  .fw-pillar { background: rgba(255,255,255,0.04); padding: 3rem 2.5rem; position: relative; overflow: hidden; transition: background 0.3s; }
+  .fw-pillar:hover { background: rgba(255,255,255,0.08); }
+  .fw-big-n { font-family: var(--serif); font-size: 5rem; font-weight: 300; color: rgba(184,149,58,0.12); line-height: 1; position: absolute; top: 1.5rem; right: 2rem; }
+  .fw-p-title { font-family: var(--serif); font-size: 2rem; font-weight: 600; color: var(--gold-light); margin-bottom: 0.4rem; position: relative; z-index: 2; }
+  .fw-p-sub { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--mist); margin-bottom: 1.5rem; position: relative; z-index: 2; }
+  .fw-p-body { font-size: 0.88rem; color: rgba(247,245,240,0.7); line-height: 1.7; position: relative; z-index: 2; }
+  .fw-p-body em { color: rgba(212,175,106,0.7); font-style: italic; }
+  .fw-outcomes { margin-top: 4rem; display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.1); }
+  .fw-out-num { font-family: var(--serif); font-size: 2.5rem; font-weight: 600; color: var(--gold-light); }
+  .fw-out-label { font-size: 0.75rem; color: rgba(247,245,240,0.5); margin-top: 0.3rem; text-transform: uppercase; letter-spacing: 0.08em; }
+
+  /* EXPERIENCE */
+  .exp-item { display: grid; grid-template-columns: 220px 1fr; gap: 3rem; padding: 3rem 0; border-bottom: 1px solid var(--rule); }
+  .exp-item:first-child { border-top: 1px solid var(--rule); }
+  .exp-period { font-family: var(--mono); font-size: 0.7rem; color: var(--mist); letter-spacing: 0.08em; margin-bottom: 0.5rem; }
+  .exp-co { font-family: var(--serif); font-size: 1.25rem; font-weight: 600; color: var(--ink); line-height: 1.2; }
+  .exp-loc { font-size: 0.78rem; color: var(--mist); margin-top: 0.3rem; }
+  .exp-role { font-family: var(--serif); font-size: 1.3rem; font-weight: 300; font-style: italic; color: var(--steel); margin-bottom: 0.6rem; }
+  .exp-promo { display: inline-flex; align-items: center; background: rgba(184,149,58,0.08); border: 1px solid rgba(184,149,58,0.2); font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.1em; color: var(--gold); padding: 0.3rem 0.8rem; margin-bottom: 1rem; }
+  .exp-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.2rem; }
+  .tag { background: var(--cream); border: 1px solid var(--rule); font-family: var(--mono); font-size: 0.65rem; padding: 0.3rem 0.6rem; letter-spacing: 0.05em; color: var(--steel); }
+  .tag.gold { background: rgba(184,149,58,0.08); border-color: rgba(184,149,58,0.25); color: var(--gold); }
+  .tag.ai { background: rgba(58,74,92,0.07); border-color: rgba(58,74,92,0.2); color: var(--steel); font-style: italic; }
+  .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 0.65rem; }
+  .exp-bullets li { font-size: 0.88rem; color: var(--steel); line-height: 1.65; padding-left: 1.2rem; position: relative; }
+  .exp-bullets li::before { content: '—'; position: absolute; left: 0; color: var(--gold); }
+
+  /* CASE STUDIES */
+  .cases-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+  .case-card { background: var(--cream); padding: 2.5rem; cursor: pointer; transition: background 0.25s; min-height: 300px; display: flex; flex-direction: column; justify-content: space-between; }
+  .case-card:hover { background: var(--ink); }
+  .case-card:hover .case-title, .case-card:hover .case-org { color: var(--paper); }
+  .case-card:hover .case-body { color: rgba(247,245,240,0.65); }
+  .case-card:hover .case-tag { background: rgba(184,149,58,0.2); color: var(--gold-light); border-color: transparent; }
+  .case-card:hover .case-arrow { color: var(--gold-light); }
+  .case-tag { display: inline-block; font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; background: white; border: 1px solid var(--rule); color: var(--mist); padding: 0.25rem 0.6rem; margin-bottom: 1.2rem; transition: all 0.25s; }
+  .case-title { font-family: var(--serif); font-size: 1.3rem; font-weight: 600; color: var(--ink); line-height: 1.3; margin-bottom: 0.4rem; transition: color 0.25s; }
+  .case-org { font-size: 0.75rem; color: var(--mist); margin-bottom: 0.8rem; transition: color 0.25s; }
+  .case-body { font-size: 0.85rem; color: var(--steel); line-height: 1.65; flex: 1; transition: color 0.25s; }
+  .case-bottom { display: flex; justify-content: space-between; align-items: flex-end; margin-top: 1.5rem; padding-top: 1.2rem; border-top: 1px solid var(--rule); }
+  .case-metric { font-family: var(--serif); font-size: 1.5rem; font-weight: 600; color: var(--gold); }
+  .case-metric-label { font-size: 0.68rem; color: var(--mist); text-transform: uppercase; letter-spacing: 0.06em; }
+  .case-arrow { font-size: 1.2rem; color: var(--mist); transition: color 0.25s; }
+
+  /* AI SECTION */
+  .ai-tool-list { display: flex; flex-direction: column; }
+  .ai-tool-item { display: grid; grid-template-columns: 44px 1fr; gap: 1.2rem; padding: 1.4rem 0; border-bottom: 1px solid var(--rule); align-items: flex-start; }
+  .ai-tool-item:first-child { border-top: 1px solid var(--rule); }
+  .ai-t-icon { width: 40px; height: 40px; background: white; border: 1px solid var(--rule); display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
+  .ai-t-name { font-size: 0.9rem; font-weight: 500; color: var(--ink); margin-bottom: 0.25rem; }
+  .ai-t-desc { font-size: 0.8rem; color: var(--mist); line-height: 1.55; }
+  .ai-panel { background: white; border: 1px solid var(--rule); padding: 2.5rem; }
+  .ai-panel-title { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--rule); }
+  .course-item { padding: 1rem 0; border-bottom: 1px solid var(--rule); }
+  .course-name { font-size: 0.88rem; font-weight: 500; color: var(--ink); margin-bottom: 0.3rem; }
+  .course-meta { display: flex; gap: 0.8rem; align-items: center; flex-wrap: wrap; }
+  .course-plat { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.08em; color: var(--gold); text-transform: uppercase; }
+  .course-why { font-size: 0.75rem; color: var(--mist); }
+  .ai-phil { margin-top: 2rem; padding: 1.8rem; background: var(--cream); border-left: 3px solid var(--gold); }
+  .ai-phil p { font-family: var(--serif); font-size: 1.05rem; font-weight: 300; font-style: italic; color: var(--ink); line-height: 1.6; }
+
+  /* SKILLS */
+  .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 4rem; }
+  .skill-cat-title { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem; padding-bottom: 0.8rem; border-bottom: 1px solid var(--rule); }
+  .skill-item { display: flex; align-items: center; justify-content: space-between; padding: 0.65rem 0; border-bottom: 1px solid var(--rule); }
+  .skill-name { font-size: 0.85rem; color: var(--steel); }
+  .skill-bar-wrap { width: 90px; height: 2px; background: var(--cream); flex-shrink: 0; }
+  .skill-bar { height: 100%; background: var(--gold); }
+
+  /* THOUGHT LEADERSHIP */
+  .tl-hl-box { background: var(--ink); color: var(--paper); padding: 2rem; margin-bottom: 2rem; }
+  .tl-hl-label { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--mist); margin-bottom: 0.8rem; }
+  .tl-hl-text { font-family: var(--serif); font-size: 1.05rem; font-weight: 300; color: var(--paper); line-height: 1.55; }
+  .tl-hl-text strong { color: var(--gold-light); font-weight: 600; }
+  .tl-pov { margin-bottom: 2rem; padding: 1.5rem; background: white; border: 1px solid var(--rule); }
+  .tl-pov-label { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; }
+  .topics-label { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; padding-bottom: 0.8rem; border-bottom: 1px solid var(--rule); }
+  .topic-list { display: flex; flex-direction: column; }
+  .topic-item { display: grid; grid-template-columns: 80px 1fr; gap: 1rem; padding: 1.1rem 0; border-bottom: 1px solid var(--rule); align-items: flex-start; }
+  .topic-item:first-child { border-top: 1px solid var(--rule); }
+  .topic-type { font-family: var(--mono); font-size: 0.58rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); background: rgba(184,149,58,0.08); border: 1px solid rgba(184,149,58,0.2); padding: 0.25rem 0.4rem; text-align: center; line-height: 1.4; }
+  .topic-title { font-size: 0.86rem; font-weight: 500; color: var(--ink); margin-bottom: 0.2rem; }
+  .topic-desc { font-size: 0.75rem; color: var(--mist); line-height: 1.45; }
+
+  /* PEERS */
+  .peers-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+  .peer-card { border: 1px solid var(--rule); padding: 2rem; display: flex; flex-direction: column; gap: 0.7rem; }
+  .peer-name { font-family: var(--serif); font-size: 1.1rem; font-weight: 600; color: var(--ink); }
+  .peer-company { font-family: var(--mono); font-size: 0.65rem; color: var(--gold); letter-spacing: 0.08em; text-transform: uppercase; }
+  .peer-bio { font-size: 0.8rem; color: var(--steel); line-height: 1.5; }
+  .peer-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .peer-tag { background: var(--cream); font-family: var(--mono); font-size: 0.6rem; padding: 0.2rem 0.5rem; color: var(--mist); }
+  .peer-link { margin-top: 0.4rem; font-family: var(--mono); font-size: 0.65rem; color: var(--steel); text-decoration: none; transition: color 0.2s; }
+  .peer-link:hover { color: var(--gold); }
+  .peers-note { margin-top: 3rem; padding: 2rem; background: var(--cream); border-left: 3px solid var(--gold); }
+  .peers-note p { font-size: 0.86rem; color: var(--steel); line-height: 1.7; }
+
+  /* EDUCATION */
+  .edu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+  .edu-card { background: var(--cream); padding: 2.5rem 2rem; }
+  .edu-year { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.1em; color: var(--mist); margin-bottom: 0.8rem; }
+  .edu-degree { font-family: var(--serif); font-size: 1rem; font-weight: 600; color: var(--ink); margin-bottom: 0.4rem; line-height: 1.3; }
+  .edu-school { font-size: 0.82rem; color: var(--steel); margin-bottom: 0.3rem; }
+  .edu-loc { font-family: var(--mono); font-size: 0.62rem; color: var(--gold); letter-spacing: 0.08em; text-transform: uppercase; }
+  .edu-note { font-size: 0.75rem; color: var(--mist); margin-top: 0.8rem; line-height: 1.5; }
+
+  /* CONSULTING */
+  .consulting-section { background: linear-gradient(135deg, var(--ink) 0%, var(--steel) 100%); color: var(--paper); position: relative; overflow: hidden; }
+  .consulting-section::before { content: ''; position: absolute; top: -100px; right: -100px; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(184,149,58,0.15) 0%, transparent 70%); }
+  .c-inner { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr auto; gap: 4rem; align-items: start; }
+  .consulting-section .s-label { color: var(--gold-light); }
+  .consulting-section .s-label::before { background: var(--gold-light); }
+  .consulting-section .s-title { color: var(--paper); max-width: 600px; }
+  .c-body { font-size: 1rem; color: rgba(247,245,240,0.7); line-height: 1.75; max-width: 520px; margin-bottom: 2rem; }
+  .c-offer { display: flex; flex-direction: column; gap: 0.9rem; padding: 2.5rem; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); min-width: 270px; }
+  .c-offer-title { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold-light); padding-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .c-offer-item { display: flex; gap: 0.8rem; font-size: 0.86rem; color: rgba(247,245,240,0.75); line-height: 1.5; }
+  .c-offer-item::before { content: '◆'; color: var(--gold-light); flex-shrink: 0; font-size: 0.5rem; margin-top: 5px; }
+  .c-timeline { position: relative; z-index: 2; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.1); }
+  .ct-label { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.12em; color: var(--gold-light); text-transform: uppercase; margin-bottom: 0.6rem; }
+  .ct-title { font-family: var(--serif); font-size: 1rem; font-weight: 600; color: var(--paper); margin-bottom: 0.6rem; }
+  .ct-items { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+  .ct-items li { font-size: 0.8rem; color: rgba(247,245,240,0.6); padding-left: 1rem; position: relative; }
+  .ct-items li::before { content: '◆'; position: absolute; left: 0; font-size: 0.4rem; color: var(--gold-light); top: 6px; }
+
+  /* CONTACT */
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
+  .contact-body { font-size: 1rem; color: var(--steel); line-height: 1.75; margin-bottom: 2.5rem; }
+  .contact-links { display: flex; flex-direction: column; gap: 1rem; }
+  .contact-link { display: flex; align-items: center; gap: 1rem; text-decoration: none; color: var(--ink); padding: 1rem 1.5rem; border: 1px solid var(--rule); transition: all 0.2s; }
+  .contact-link:hover { border-color: var(--gold); background: rgba(184,149,58,0.04); }
+  .cl-icon { width: 36px; height: 36px; background: var(--cream); display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
+  .cl-text strong { display: block; font-size: 0.88rem; font-weight: 500; }
+  .cl-text span { font-size: 0.75rem; color: var(--mist); }
+  .contact-form { background: var(--cream); padding: 2.5rem; }
+  .contact-form h3 { font-family: var(--serif); font-size: 1.3rem; font-weight: 400; margin-bottom: 1.5rem; }
+  .ff { margin-bottom: 1.2rem; }
+  .ff label { display: block; font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--mist); margin-bottom: 0.4rem; }
+  .ff input, .ff textarea, .ff select { width: 100%; border: 1px solid var(--rule); background: white; padding: 0.8rem 1rem; font-family: var(--sans); font-size: 0.9rem; color: var(--ink); outline: none; transition: border-color 0.2s; }
+  .ff input:focus, .ff textarea:focus, .ff select:focus { border-color: var(--gold); }
+  .ff textarea { resize: vertical; min-height: 90px; }
+  .btn-send { background: var(--ink); color: var(--paper); border: none; padding: 0.9rem 2rem; font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; width: 100%; transition: background 0.2s; }
+  .btn-send:hover { background: var(--gold); }
+  .form-success { display: none; padding: 1rem; background: rgba(184,149,58,0.1); border: 1px solid rgba(184,149,58,0.3); font-family: var(--mono); font-size: 0.72rem; color: var(--gold); letter-spacing: 0.08em; text-align: center; margin-top: 1rem; }
+
+  /* FOOTER */
+  footer { border-top: 1px solid var(--rule); padding: 3rem 4rem; display: flex; justify-content: space-between; align-items: center; }
+  .footer-logo { font-family: var(--serif); font-size: 1rem; font-weight: 600; }
+  .footer-logo span { color: var(--gold); }
+  .footer-copy { font-family: var(--mono); font-size: 0.62rem; color: var(--mist); letter-spacing: 0.08em; }
+  .footer-links { display: flex; gap: 2rem; }
+  .footer-links a { font-family: var(--mono); font-size: 0.62rem; color: var(--mist); text-decoration: none; letter-spacing: 0.1em; text-transform: uppercase; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--gold); }
+
+  /* REVEAL */
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.visible { opacity: 1; transform: none; }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    nav { padding: 1rem 2rem; }
+    .nav-links { display: none; }
+    .hero { grid-template-columns: 1fr; min-height: auto; padding: 100px 0 0; }
+    .hero-left { padding: 3rem 2rem; }
+    .hero-right { height: 300px; }
+    section { padding: 4rem 2rem; }
+    .two-col, .contact-grid, .skills-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .fw-grid, .cases-grid, .peers-grid, .edu-grid { grid-template-columns: 1fr; }
+    .fw-outcomes, .c-timeline { grid-template-columns: repeat(2, 1fr); }
+    .c-inner { grid-template-columns: 1fr; }
+    .exp-item { grid-template-columns: 1fr; gap: 1rem; }
+    .pivot-banner { grid-template-columns: 1fr; gap: 1.5rem; padding: 2rem; }
+    footer { flex-direction: column; gap: 1.5rem; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="#top">Scale With <span>Signals</span>.</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#framework">Framework</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#cases">Case Studies</a></li>
+    <li><a href="#ai">AI &amp; Tools</a></li>
+    <li><a href="#consulting">Consulting</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a class="nav-cta" href="#contact">Let's Connect</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="top" style="border-top:none; padding-bottom:0;">
+  <div class="hero-left">
+    <div class="hero-eyebrow">Experience Transformation Leader</div>
+    <h1 class="hero-name">Abhishek<br/><em>Sharma</em></h1>
+    <p class="hero-title">CX Strategy &amp; Experience Transformation · AI-Enabled Systems Design<br/>Digital Adoption · Financial Services &amp; Enterprise Technology</p>
+    <div class="hero-fw">Signals <span class="arr">→</span> Systems <span class="arr">→</span> Scale™</div>
+    <div class="hero-stats">
+      <div><div class="stat-num">$400M</div><div class="stat-label">Digital Ecosystems Managed</div></div>
+      <div><div class="stat-num">+145%</div><div class="stat-label">Digital Adoption Delivered</div></div>
+      <div><div class="stat-num">12+</div><div class="stat-label">Years Across 3 Continents</div></div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="fw-card">
+      <div class="fw-badge">™ Proprietary Framework</div>
+      <div class="fw-card-title">Signals → Systems → Scale™ Operating Model</div>
+      <div class="fw-steps">
+        <div class="fw-step">
+          <div class="fw-step-n">01</div>
+          <div class="fw-step-t"><strong>Signals</strong><span>VoC, behavioral &amp; AI-assisted data synthesis</span></div>
+        </div>
+        <div class="fw-conn"></div>
+        <div class="fw-step">
+          <div class="fw-step-n">02</div>
+          <div class="fw-step-t"><strong>Systems</strong><span>Governance, journey architecture &amp; AI workflows</span></div>
+        </div>
+        <div class="fw-conn"></div>
+        <div class="fw-step">
+          <div class="fw-step-n">03</div>
+          <div class="fw-step-t"><strong>Scale</strong><span>Adoption, automation &amp; commercial impact</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="s-label">About</div>
+  <h2 class="s-title">Curiosity as a career —<br/><em>always asking why, for whom, and what next</em></h2>
+  <div class="two-col reveal">
+    <div class="body-text">
+      <p>Customer experience did not happen to me as a career choice — it emerged as a way of working. Engineering gave me a foundational gift: the discipline of asking <em>why</em> something is built the way it is, <em>for whom</em> it is built, and <em>what</em> it actually does for the person on the other side of the screen. Those questions, more than any technology, became the lens through which I have approached every role since.</p>
+
+      <p>Starting as a software engineer at Infosys — working on systems for Vodafone UK and Telstra Australia — I was already more interested in the human behind the ticket than the ticket itself. That curiosity pulled me toward postgraduate study: a dual MBA across Berlin and Pune, where I gained international exposure through live consulting projects in Germany, immersion in multicultural business environments, and a rigorous grounding in operations and supply chain strategy. That combination — technical foundations, global perspective, and operational discipline — shaped the practitioner I became.</p>
+
+      <div class="pull-quote">"I have always worked with a simple compass: Why are we doing this? For whom? What exactly are we building? How should we do it? And then — what does success look like next?"</div>
+
+      <p>Engineering made me better at operations because I understood what was happening under the hood. Operations made me better at CX because I could see where organizational systems created friction for customers. CX made me better at strategy because I learned to read what data alone cannot tell you — the gap between what customers do and what organizations assume they do.</p>
+
+      <p>That through-line — from engineering to operations to experience strategy to AI-enabled transformation — is not a series of pivots. It is one continuous inquiry, across three continents, into how organizations can work better for the people they serve. Today that inquiry takes the form of the <strong>Signals → Systems → Scale™</strong> model: a practical operating framework for turning customer intelligence into organizational capability and commercial growth.</p>
+
+      <p>I work with organizations — as a leader, as a consultant, or as both — where that question is genuinely alive: <em>how do we understand our customers deeply enough to serve them well at scale?</em></p>
+    </div>
+    <div>
+      <ul class="cred-list">
+        <li><div class="cred-icon">📍</div><div class="cred-text"><strong>Irvine, California — open to US-wide &amp; global remote roles</strong><span>Available for leadership positions and consulting engagements</span></div></li>
+        <li><div class="cred-icon">🎓</div><div class="cred-text"><strong>Dual MBA / MA — International Business</strong><span>HWR Berlin (Germany) &amp; Symbiosis Institute (India), 2014–2016</span></div></li>
+        <li><div class="cred-icon">🎓</div><div class="cred-text"><strong>BE — Computer Science &amp; Engineering</strong><span>MITS Gwalior, 2006–2010 · Technical depth behind every CX decision</span></div></li>
+        <li><div class="cred-icon">✦</div><div class="cred-text"><strong>Six Sigma Green Belt · Process Excellence</strong><span>Data-driven discipline applied to customer and operational systems</span></div></li>
+        <li><div class="cred-icon">🌍</div><div class="cred-text"><strong>3 continents · USA · India · Germany</strong><span>English (fluent) · Hindi (native) · German (working knowledge)</span></div></li>
+        <li><div class="cred-icon">🛠</div><div class="cred-text"><strong>Theydo · Dovetail · Figma · Miro · Salesforce · MS Dynamics · Copilot</strong><span>SAP · Google Analytics · C++ · Java · CRM platforms</span></div></li>
+      </ul>
+
+      <!-- Working Philosophy Panel -->
+      <div style="margin-top:2rem; background:var(--ink); color:var(--paper); padding:2rem;">
+        <div style="font-family:var(--mono); font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--mist); margin-bottom:1.2rem;">How I Work</div>
+        <div style="display:flex; flex-direction:column; gap:0.9rem;">
+          <div style="display:flex; gap:1rem; align-items:flex-start;">
+            <div style="font-family:var(--serif); font-size:1.4rem; color:var(--gold); line-height:1; flex-shrink:0; width:1.8rem;">?</div>
+            <div><div style="font-family:var(--sans); font-size:0.85rem; font-weight:500; color:var(--paper); margin-bottom:0.15rem;">Why are we doing this?</div><div style="font-size:0.75rem; color:rgba(247,245,240,0.5); line-height:1.4;">Establish the real purpose before any solution is considered</div></div>
+          </div>
+          <div style="display:flex; gap:1rem; align-items:flex-start;">
+            <div style="font-family:var(--serif); font-size:1.4rem; color:var(--gold); line-height:1; flex-shrink:0; width:1.8rem;">◎</div>
+            <div><div style="font-family:var(--sans); font-size:0.85rem; font-weight:500; color:var(--paper); margin-bottom:0.15rem;">For whom?</div><div style="font-size:0.75rem; color:rgba(247,245,240,0.5); line-height:1.4;">Name the human — customer, employee, partner — before designing anything</div></div>
+          </div>
+          <div style="display:flex; gap:1rem; align-items:flex-start;">
+            <div style="font-family:var(--serif); font-size:1.4rem; color:var(--gold); line-height:1; flex-shrink:0; width:1.8rem;">▣</div>
+            <div><div style="font-family:var(--sans); font-size:0.85rem; font-weight:500; color:var(--paper); margin-bottom:0.15rem;">What exactly are we building?</div><div style="font-size:0.75rem; color:rgba(247,245,240,0.5); line-height:1.4;">Define scope, outcome, and success criteria with precision</div></div>
+          </div>
+          <div style="display:flex; gap:1rem; align-items:flex-start;">
+            <div style="font-family:var(--serif); font-size:1.4rem; color:var(--gold); line-height:1; flex-shrink:0; width:1.8rem;">→</div>
+            <div><div style="font-family:var(--sans); font-size:0.85rem; font-weight:500; color:var(--paper); margin-bottom:0.15rem;">How do we do it?</div><div style="font-size:0.75rem; color:rgba(247,245,240,0.5); line-height:1.4;">Choose methods, tools, and governance that match the problem — not the trend</div></div>
+          </div>
+          <div style="display:flex; gap:1rem; align-items:flex-start;">
+            <div style="font-family:var(--serif); font-size:1.4rem; color:var(--gold); line-height:1; flex-shrink:0; width:1.8rem;">↗</div>
+            <div><div style="font-family:var(--sans); font-size:0.85rem; font-weight:500; color:var(--paper); margin-bottom:0.15rem;">What does success look like next?</div><div style="font-size:0.75rem; color:rgba(247,245,240,0.5); line-height:1.4;">Measure outcomes, learn from them, and define the next horizon</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PIVOT BANNER — replaced by the new about narrative, removed -->
+
+<!-- FRAMEWORK -->
+<section class="fw-section" id="framework">
+  <div class="s-label">Proprietary Framework</div>
+  <h2 class="s-title">Signals <em>→</em> Systems <em>→</em> Scale™</h2>
+  <div class="fw-grid reveal">
+    <div class="fw-pillar">
+      <div class="fw-big-n">01</div>
+      <div class="fw-p-title">Signals</div>
+      <div class="fw-p-sub">Insight Architecture</div>
+      <div class="fw-p-body">Interpreting meaningful signals across customer and employee journeys — behavioral data, VoC programs, NPS analytics, AI-assisted qualitative analysis, and operational metrics — into unified decision intelligence. Not just collecting data: translating signal patterns into where trust breaks and where commercial opportunity lives.<br/><br/><em>Applied at DLL via enterprise VoC ecosystem using Dovetail AI analysis and Theydo journey mapping. At Aditya Birla via NPS and digital behavior analytics connected to C-Suite commercial dashboards.</em></div>
+    </div>
+    <div class="fw-pillar">
+      <div class="fw-big-n">02</div>
+      <div class="fw-p-title">Systems</div>
+      <div class="fw-p-sub">Governance &amp; Workflow Design</div>
+      <div class="fw-p-body">Translating signals into deliberate system design — journey architecture, AI-enabled workflow orchestration, chatbot and voice bot governance, CRM migration, and cross-functional accountability structures. The HELP framework (Helpful, Easy, Learning, Personalized) is one output of this pillar.<br/><br/><em>Applied at Aditya Birla via MS Dynamics migration, chatbot/voice bot/email bot governance. At HDFC Life via payment gateway governance for a $400M digital revenue ecosystem.</em></div>
+    </div>
+    <div class="fw-pillar">
+      <div class="fw-big-n">03</div>
+      <div class="fw-p-title">Scale</div>
+      <div class="fw-p-sub">Adoption &amp; Commercial Impact</div>
+      <div class="fw-p-body">Scale validates the strength of signals and systems. Through digital adoption programs, AI-assisted automation, and commercial alignment, transformation becomes measurable — in adoption rates, revenue uplift, cost efficiency, and CSAT. Scale is where strategy earns its proof of concept.<br/><br/><em>+145% digital adoption at Aditya Birla. $300K savings and +12pt CSAT at DLL. $400M ecosystem stability at HDFC Life. +5% revenue uplift via CX-driven retention and upsell.</em></div>
+    </div>
+  </div>
+  <div class="fw-outcomes reveal">
+    <div><div class="fw-out-num">+12 pts</div><div class="fw-out-label">CSAT improvement</div></div>
+    <div><div class="fw-out-num">+145%</div><div class="fw-out-label">Digital adoption</div></div>
+    <div><div class="fw-out-num">~$550K</div><div class="fw-out-label">Cost savings</div></div>
+    <div><div class="fw-out-num">+5%</div><div class="fw-out-label">Revenue uplift via CX</div></div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="s-label">Career Journey</div>
+  <h2 class="s-title">12 years · 3 continents ·<br/><em>progressive leadership scope</em></h2>
+
+  <div class="exp-item reveal">
+    <div>
+      <div class="exp-period">Nov 2021 — Present</div>
+      <div class="exp-co">DLL Financial Services Ltd.</div>
+      <div class="exp-loc">United States (Global MNC)</div>
+    </div>
+    <div>
+      <div class="exp-role">North America CX Lead · Global Customer Experience Team</div>
+      <div class="exp-promo">↑ Progressed: Global CX Consultant → NA Regional CX Lead</div>
+      <div class="exp-tags">
+        <span class="tag gold">+12 pts CSAT</span><span class="tag gold">$300K Savings</span>
+        <span class="tag">VoC Ecosystem</span><span class="tag">Customer 360</span>
+        <span class="tag ai">Dovetail AI</span><span class="tag ai">Theydo</span><span class="tag ai">MS Copilot</span>
+      </div>
+      <ul class="exp-bullets">
+        <li>Built the initial governance frameworks and operating model for DLL's global CX team — shaping how experience intelligence would function across geographies before transitioning to North America CX Lead.</li>
+        <li>Designed and scaled enterprise Voice of Customer ecosystem integrating behavioral, survey, and operational data into executive decision dashboards — CSAT improved 12 percentage points, delivering ~$300K in cost savings.</li>
+        <li>Deployed AI-powered VoC tools: Dovetail for AI-assisted qualitative feedback analysis at scale, Theydo for connected journey mapping, and Microsoft Copilot for operational insight synthesis.</li>
+        <li>Led journey redesign using the proprietary HELP framework (Helpful, Easy, Learning, Personalized) — enabling scalable documentation and process modernization across multiple business units.</li>
+        <li>Aligned channel teams around shared CX signals supporting Customer 360 direction and analytics roadmap for the North America region.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="exp-item reveal">
+    <div>
+      <div class="exp-period">Sep 2019 — Jan 2021</div>
+      <div class="exp-co">Aditya Birla Finance Ltd.</div>
+      <div class="exp-loc">Mumbai, India</div>
+    </div>
+    <div>
+      <div class="exp-role">Senior Manager, Customer Experience</div>
+      <div class="exp-tags">
+        <span class="tag gold">+145% Digital Adoption</span><span class="tag gold">+5% Revenue Uplift</span>
+        <span class="tag">COO Office Exposure</span><span class="tag">Vendor Evaluation</span>
+        <span class="tag ai">Chatbot Governance</span><span class="tag ai">Voice Bot</span><span class="tag ai">Email Bot</span>
+      </div>
+      <ul class="exp-bullets">
+        <li>Strategic individual contributor with direct COO office exposure — involved in new technology integration decisions, AI-assisted CX vendor evaluation, and cross-functional alignment across marketing, operations excellence, and corporate teams.</li>
+        <li>Governed end-to-end AI-enabled CX deployment: chatbot design and training, email bot and voice bot vendor evaluation and implementation — establishing governance frameworks adopted as organizational standards.</li>
+        <li>Led full migration of all customer journey workflows from legacy to new MS Dynamics CRM system across all lines of business — a complex program in a multi-entity financial services environment.</li>
+        <li>Increased digital adoption 145%, improved workforce productivity ~15%, and drove ~5% revenue uplift through upselling, cross-selling, and retention.</li>
+        <li>Built executive visualization frameworks linking NPS movement, digital adoption, and commercial indicators — strengthening C-Suite prioritization for technology investment.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="exp-item reveal">
+    <div>
+      <div class="exp-period">Jun 2016 — Sep 2019</div>
+      <div class="exp-co">HDFC Life Pvt. Ltd.</div>
+      <div class="exp-loc">Mumbai, India</div>
+    </div>
+    <div>
+      <div class="exp-role">Manager, Hub Operations — Digital Services &amp; Business Operations</div>
+      <div class="exp-promo">↑ Promoted: Deputy Manager → Department Manager → Manager</div>
+      <div class="exp-tags">
+        <span class="tag gold">$400M Digital Revenue</span><span class="tag gold">+30 bps CSAT</span>
+        <span class="tag">Budget Ownership</span><span class="tag">Led 2 Team Leads</span>
+        <span class="tag">Vendor Influence</span><span class="tag">Internal Audit</span>
+      </div>
+      <ul class="exp-bullets">
+        <li>Promoted twice — ultimately leading two functional teams through two direct team leads: Digital Services (online collections, portal, chatbot, new services) and Business Operations (TAT management, service parameters).</li>
+        <li>Owned departmental budget and expense governance: tracked monthly expenses, approved intradepartmental spend, conducted internal audits, and managed financial reporting — P&amp;L accountability at department level.</li>
+        <li>Influenced vendor selection decisions for payment gateways and digital platform partnerships — evaluated campaign partners and proposed strategic marketing initiatives in collaboration with digital marketing teams.</li>
+        <li>Implemented omnichannel digital customer support improving CSAT by 30bps and reducing service turnaround by 20 percentage points.</li>
+        <li>Established payment gateway governance end-to-end — project charters, UAT impact assessments, monthly review cadence — ensuring zero revenue disruption across $400M in annual digital collections.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="exp-item reveal">
+    <div>
+      <div class="exp-period">Nov 2014 — Jun 2015</div>
+      <div class="exp-co">Deutsche Telekom / Öekotek</div>
+      <div class="exp-loc">Berlin, Germany</div>
+    </div>
+    <div>
+      <div class="exp-role">Consultant — International Strategy &amp; Supply Chain</div>
+      <div class="exp-tags"><span class="tag">SCOR Framework</span><span class="tag">International Expansion</span><span class="tag">Emerging Markets</span></div>
+      <ul class="exp-bullets">
+        <li>Developed SCOR-based sustainability framework and self-assessment tool for Deutsche Telekom M2M division — identifying green supply chain levers and projected cost savings. Recommendations adopted by the client team.</li>
+        <li>Delivered international market expansion strategy for Öekotek Energiemanagement's energy efficiency software. Strategy adopted and used to guide expansion planning into emerging markets.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="exp-item reveal">
+    <div>
+      <div class="exp-period">Sep 2010 — May 2013</div>
+      <div class="exp-co">Infosys Limited</div>
+      <div class="exp-loc">Hyderabad, India</div>
+    </div>
+    <div>
+      <div class="exp-role">Senior Systems Engineer — Energy &amp; Communications Services</div>
+      <div class="exp-tags"><span class="tag">Vodafone UK</span><span class="tag">Telstra Australia</span><span class="tag">RSA-256 Encryption</span><span class="tag">BMC Remedy</span></div>
+      <ul class="exp-bullets">
+        <li>L2 production support for Vodafone UK — improved issue resolution rate 20% within defined TAT. Awarded Best L2 Support Staff during project transition.</li>
+        <li>Implemented RSA-256 encryption/decryption POC as key security deliverable for Telstra Australia — technical foundation informing every platform architecture conversation today.</li>
+        <li>Deployed internal e-commerce website on HYBRIS ERP; led requirements and high-level design with onsite and offsite stakeholders.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section id="cases">
+  <div class="s-label">Case Studies</div>
+  <h2 class="s-title">Transformation in practice — <em>real outcomes</em></h2>
+  <div class="cases-grid reveal">
+    <div class="case-card">
+      <div>
+        <div class="case-tag">VoC · AI-Powered Insight</div>
+        <div class="case-title">Building an Enterprise VoC Ecosystem That Drives Decisions</div>
+        <div class="case-org">DLL Financial Services · USA · 2021–Present</div>
+        <div class="case-body">Fragmented customer signals were limiting strategic visibility. Designed a VoC ecosystem integrating behavioral, survey, and operational data — using Dovetail for AI-assisted qualitative analysis and Theydo for journey mapping — into real-time leadership dashboards that replaced gut-feel with decision-ready intelligence.</div>
+      </div>
+      <div class="case-bottom">
+        <div><div class="case-metric">+12 pts</div><div class="case-metric-label">CSAT Improvement</div></div>
+        <div class="case-arrow">→</div>
+      </div>
+    </div>
+    <div class="case-card">
+      <div>
+        <div class="case-tag">Digital Adoption · AI-CX · Governance</div>
+        <div class="case-title">145% Adoption Lift Through Journey Intelligence &amp; AI Integration</div>
+        <div class="case-org">Aditya Birla Finance · Mumbai · 2019–2021</div>
+        <div class="case-body">Connected behavioral signals, revenue visibility, and AI-assisted automation — governing chatbot, voice bot, and email bot deployment — to reposition digital channels as measurable growth drivers. Simultaneously led full CRM migration across all business lines.</div>
+      </div>
+      <div class="case-bottom">
+        <div><div class="case-metric">+145%</div><div class="case-metric-label">Digital Adoption</div></div>
+        <div class="case-arrow">→</div>
+      </div>
+    </div>
+    <div class="case-card">
+      <div>
+        <div class="case-tag">Governance · Leadership · Revenue</div>
+        <div class="case-title">Governing $400M Digital Revenue: Budget, Teams &amp; Zero Disruption</div>
+        <div class="case-org">HDFC Life · Mumbai · 2016–2019</div>
+        <div class="case-body">Promoted twice to lead two functional teams with full budget ownership and vendor influence. Implemented governance-first digital infrastructure ensuring zero disruption to $400M in annual online revenue while deploying omnichannel support and improving CSAT by 30bps.</div>
+      </div>
+      <div class="case-bottom">
+        <div><div class="case-metric">$400M</div><div class="case-metric-label">Revenue Ecosystem Governed</div></div>
+        <div class="case-arrow">→</div>
+      </div>
+    </div>
+  </div>
+  <p style="margin-top:2rem; font-family:var(--mono); font-size:0.65rem; color:var(--mist); letter-spacing:0.1em; text-align:center; text-transform:uppercase;">→ Detailed case study write-ups available on request. <a href="#contact" style="color:var(--gold); text-decoration:none;">Contact me</a> to discuss any engagement.</p>
+</section>
+
+<!-- AI & TOOLS -->
+<section id="ai" style="background:var(--cream);">
+  <div class="s-label">AI-Enabled CX Practice</div>
+  <h2 class="s-title">Human at the center —<br/><em>AI as the amplifier</em></h2>
+  <div class="two-col reveal">
+    <div>
+      <p style="font-size:1rem; color:var(--steel); line-height:1.8; margin-bottom:2.5rem;">Every AI tool I have deployed was designed to surface better signals, enable faster decisions, and reduce friction — with a human always reviewing, governing, and acting on the output. Technology amplifies human judgment; it does not replace it.</p>
+      <div class="ai-tool-list">
+        <div class="ai-tool-item">
+          <div class="ai-t-icon">🧠</div>
+          <div><div class="ai-t-name">Dovetail — AI-Assisted Qualitative Research</div><div class="ai-t-desc">Analyzed thousands of customer comments at scale, surfacing themes, sentiment patterns, and friction points. Connected to operational data for decision-ready VoC reporting used by senior leadership.</div></div>
+        </div>
+        <div class="ai-tool-item">
+          <div class="ai-t-icon">🗺</div>
+          <div><div class="ai-t-name">Theydo — AI-Powered Journey Mapping</div><div class="ai-t-desc">Maps customer journeys with AI-assisted tagging and cross-functional alignment, connecting journey stages directly to VoC signals and business outcomes — moving journey maps from static documents to live strategic tools.</div></div>
+        </div>
+        <div class="ai-tool-item">
+          <div class="ai-t-icon">🤖</div>
+          <div><div class="ai-t-name">Chatbot, Voice Bot &amp; Email Bot Governance</div><div class="ai-t-desc">End-to-end governance of AI-assisted customer service bots at Aditya Birla — dialogue design, training validation, performance monitoring, escalation logic, and ownership alignment. Framework adopted across business units.</div></div>
+        </div>
+        <div class="ai-tool-item">
+          <div class="ai-t-icon">📊</div>
+          <div><div class="ai-t-name">Microsoft Copilot — Operational Insight Synthesis</div><div class="ai-t-desc">Applied to analyze customer comment volumes, extract actionable insights, and connect them to operational metrics — enabling faster VoC cycle times and richer executive reporting.</div></div>
+        </div>
+        <div class="ai-tool-item">
+          <div class="ai-t-icon">🔍</div>
+          <div><div class="ai-t-name">AI Vendor Evaluation — Voice Bot &amp; Automation</div><div class="ai-t-desc">Led vendor evaluation for voice bot integration at HDFC Life — assessing NLP quality, integration architecture, and commercial terms. Built evaluation frameworks used as organizational standards.</div></div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="ai-panel">
+        <div class="ai-panel-title">Continuous Learning — AI &amp; CX</div>
+        <div class="course-item"><div class="course-name">AI for Everyone</div><div class="course-meta"><span class="course-plat">Coursera · Andrew Ng</span><span class="course-why">Executive AI fluency and vocabulary</span></div></div>
+        <div class="course-item"><div class="course-name">Generative AI for Business Leaders</div><div class="course-meta"><span class="course-plat">Harvard Online / edX</span><span class="course-why">Strategic AI decision-making at VP level</span></div></div>
+        <div class="course-item"><div class="course-name">Customer Experience in the Age of AI</div><div class="course-meta"><span class="course-plat">LinkedIn Learning</span><span class="course-why">Direct CX + AI methodology mapping</span></div></div>
+        <div class="course-item"><div class="course-name">Prompt Engineering for Analysts</div><div class="course-meta"><span class="course-plat">DeepLearning.ai</span><span class="course-why">Formalizes Copilot usage as a teachable skill</span></div></div>
+        <div class="course-item"><div class="course-name">AI Product Management</div><div class="course-meta"><span class="course-plat">Reforge / Product School</span><span class="course-why">Connects AI capabilities to service design</span></div></div>
+      </div>
+      <div class="ai-phil">
+        <p>"Keeping humans at the center of any AI design is not a constraint — it is the design principle that ensures AI-powered systems earn trust, drive adoption, and deliver outcomes that last."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="s-label">Core Competencies</div>
+  <h2 class="s-title">Strategy, design, and <em>execution</em></h2>
+  <div class="skills-grid reveal">
+    <div>
+      <div class="skill-cat-title">Strategic Leadership</div>
+      <div class="skill-item"><span class="skill-name">Customer Experience Strategy &amp; VoC Programs</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:96%"></div></div></div>
+      <div class="skill-item"><span class="skill-name">Digital Transformation &amp; Adoption Programs</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:92%"></div></div></div>
+      <div class="skill-item"><span class="skill-name">Journey Mapping &amp; Design Thinking</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:92%"></div></div></div>
+      <div class="skill-item"><span class="skill-name">NPS, CSAT &amp; CX Analytics</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:90%"></div></div></div>
+      <div class="skill-item"><span class="skill-name">Cross-functional &amp; International Team Leadership</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:90%"></div></div></div>
+      <div class="skill-item"><span class="skill-name">Budget Governance &amp; Departmental P&amp;L</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:82%"></div></div></div>
+      <div class="skill-item"><span class="skill-name">Vendor Evaluation &amp; Strategic Partnerships</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:84%"></div></div></div>
+    </div>
+    <div>
+      <div class="skill-cat-title">AI, Technology &amp; Execution</div>
+      <div class="skill-item"><span class="skill-name">AI-Enabled CX (Chatbot, Voice, Email Bot)</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:85%"></div></div></div>
+      <div class="skill-item"><span class="skill-name">Dovetail · Theydo · MS Copilot</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:82%"></div></div></div>
+      <div class="skill-item"><span class="skill-name">CRM: Salesforce &amp; MS Dynamics</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:85%"></div></div></div>
+      <div class="skill-item"><span class="skill-name">Figma · Miro (UX Prototyping)</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:80%"></div></div></div>
+      <div class="skill-item"><span class="skill-name">Six Sigma Process Design &amp; Governance</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:82%"></div></div></div>
+      <div class="skill-item"><span class="skill-name">Payment Gateway &amp; Digital Platform Integration</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:80%"></div></div></div>
+      <div class="skill-item"><span class="skill-name">C++ · Java · SAP · Google Analytics</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:62%"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- THOUGHT LEADERSHIP -->
+<section id="linkedin" style="background:var(--cream);">
+  <div class="s-label">Thought Leadership</div>
+  <h2 class="s-title">Perspectives on <em>experience transformation</em></h2>
+  <div class="two-col reveal">
+    <div>
+      <p style="font-size:1rem; color:var(--steel); line-height:1.8; margin-bottom:2rem;">I write and speak about the intersection of customer behavior, digital systems, and AI-enabled transformation — grounded in real work across financial services, fintech, and enterprise technology. My focus is on thinking that practitioners actually need, not surface-level CX advice.</p>
+      <div class="tl-hl-box">
+        <div class="tl-hl-label">LinkedIn</div>
+        <div class="tl-hl-text"><strong>CX Strategy &amp; Experience Transformation</strong> | Signals → Systems → Scale™ | AI-Enabled CX | Financial Services | <strong>$400M Digital · +145% Adoption</strong></div>
+      </div>
+      <div class="tl-pov">
+        <div class="tl-pov-label">My Point of View</div>
+        <p style="font-size:0.88rem; color:var(--steel); line-height:1.7;">Some transformation work starts with technology. The work that lasts starts with people. I began as a software engineer — then deliberately pivoted to experience strategy, because I recognized my greatest leverage was at the intersection of human behavior and digital systems. That engineering-to-strategy arc, across the US, India, and Germany, is the foundation of how I think and work. My Signals → Systems → Scale™ model is the through-line across every engagement I have led.</p>
+      </div>
+      <a href="https://www.linkedin.com/in/abhisheksharma13" target="_blank" class="nav-cta" style="background:var(--steel);">Follow on LinkedIn →</a>
+    </div>
+    <div>
+      <div class="topics-label">Topics I Write About</div>
+      <div class="topic-list">
+        <div class="topic-item">
+          <div class="topic-type">Framework</div>
+          <div><div class="topic-title">What most VoC programs get wrong — and the 3 signals you're missing</div><div class="topic-desc">The difference between data collection and signal interpretation — and why most organizations are doing only the former.</div></div>
+        </div>
+        <div class="topic-item">
+          <div class="topic-type">Case Insight</div>
+          <div><div class="topic-title">How behavioral journey signals drove a 145% lift in digital adoption</div><div class="topic-desc">What changes when you stop asking why users aren't adopting and start reading what their behavior is already telling you.</div></div>
+        </div>
+        <div class="topic-item">
+          <div class="topic-type">AI + CX</div>
+          <div><div class="topic-title">AI-powered VoC: using Dovetail and Copilot to synthesize thousands of customer signals</div><div class="topic-desc">How AI tools amplify human judgment in qualitative research — without replacing the analyst's role.</div></div>
+        </div>
+        <div class="topic-item">
+          <div class="topic-type">Opinion</div>
+          <div><div class="topic-title">The CX metric your board actually cares about — and it is not NPS</div><div class="topic-desc">Why connecting experience decisions to revenue impact is the only CX conversation worth having in the boardroom.</div></div>
+        </div>
+        <div class="topic-item">
+          <div class="topic-type">Governance</div>
+          <div><div class="topic-title">3 questions to ask before redesigning any customer journey</div><div class="topic-desc">The diagnostic framework I use at the start of every engagement — regardless of industry or organization size.</div></div>
+        </div>
+        <div class="topic-item">
+          <div class="topic-type">Systems</div>
+          <div><div class="topic-title">Why chatbot governance is a CX strategy problem, not an IT problem</div><div class="topic-desc">The organizational decisions that determine whether an AI-assisted channel builds or destroys customer trust.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PEERS -->
+<section id="peers">
+  <div class="s-label">Professional Landscape</div>
+  <h2 class="s-title">Leaders in <em>experience transformation</em> I follow</h2>
+  <p style="color:var(--steel); max-width:620px; margin-bottom:3rem; line-height:1.7; font-size:0.95rem;">A selection of recognized leaders working at the same intersection of customer experience strategy, digital transformation, and consulting — whose work and thinking I follow closely.</p>
+  <div class="peers-grid reveal">
+    <div class="peer-card">
+      <div class="peer-name">Annette Franz</div>
+      <div class="peer-company">Founder &amp; CEO — CX Journey Inc.</div>
+      <div class="peer-bio">Leading CX transformation consultant, author, and speaker. Known for human-centered journey design and VoC programs that connect directly to business outcomes.</div>
+      <div class="peer-tags"><span class="peer-tag">Journey Mapping</span><span class="peer-tag">Human-Centered CX</span><span class="peer-tag">VoC Programs</span></div>
+      <a class="peer-link" href="https://www.linkedin.com/in/annettefranz/" target="_blank">↗ linkedin.com/in/annettefranz</a>
+    </div>
+    <div class="peer-card">
+      <div class="peer-name">Jon Picoult</div>
+      <div class="peer-company">Founder — Watermark Consulting</div>
+      <div class="peer-bio">CX consulting firm founder with deep financial services expertise. Known for connecting CX investment to shareholder value and commercial outcomes.</div>
+      <div class="peer-tags"><span class="peer-tag">Financial Services CX</span><span class="peer-tag">CX ROI</span><span class="peer-tag">Consulting</span></div>
+      <a class="peer-link" href="https://www.linkedin.com/in/jonpicoult/" target="_blank">↗ linkedin.com/in/jonpicoult</a>
+    </div>
+    <div class="peer-card">
+      <div class="peer-name">Jeannie Walters</div>
+      <div class="peer-company">CEO — Experience Investigators</div>
+      <div class="peer-bio">CX consulting firm founder and internationally recognized thought leader. Focuses on VoC programs, journey mapping, and building CX practices that create measurable organizational change.</div>
+      <div class="peer-tags"><span class="peer-tag">VoC Programs</span><span class="peer-tag">CX Consulting</span><span class="peer-tag">Thought Leadership</span></div>
+      <a class="peer-link" href="https://www.linkedin.com/in/jeanniewalters/" target="_blank">↗ linkedin.com/in/jeanniewalters</a>
+    </div>
+    <div class="peer-card">
+      <div class="peer-name">Blake Morgan</div>
+      <div class="peer-company">CX Futurist · Forbes Contributor · Author</div>
+      <div class="peer-bio">Customer experience futurist focused on digital CX and AI's role in transforming how organizations serve customers. Forbes contributor, author, and keynote speaker.</div>
+      <div class="peer-tags"><span class="peer-tag">Digital CX</span><span class="peer-tag">AI in CX</span><span class="peer-tag">Thought Leadership</span></div>
+      <a class="peer-link" href="https://www.linkedin.com/in/blakemichellemorgan/" target="_blank">↗ linkedin.com/in/blakemichellemorgan</a>
+    </div>
+    <div class="peer-card">
+      <div class="peer-name">Diane Magers</div>
+      <div class="peer-company">Former CEO, CXPA · Independent CX Consultant</div>
+      <div class="peer-bio">Former CEO of the Customer Experience Professionals Association. Deep expertise in operationalizing enterprise CX programs and building organizational CX capability at scale.</div>
+      <div class="peer-tags"><span class="peer-tag">CX Strategy</span><span class="peer-tag">VoC Programs</span><span class="peer-tag">Enterprise CX</span></div>
+      <a class="peer-link" href="https://www.linkedin.com/in/dianemagers/" target="_blank">↗ linkedin.com/in/dianemagers</a>
+    </div>
+    <div class="peer-card">
+      <div class="peer-name">Shep Hyken</div>
+      <div class="peer-company">Chief Amazement Officer — Shepard Presentations</div>
+      <div class="peer-bio">CX author, keynote speaker, and consultant. Named a top customer service expert by Global Gurus. Known for making customer service a measurable competitive advantage.</div>
+      <div class="peer-tags"><span class="peer-tag">CX Consulting</span><span class="peer-tag">Customer Service</span><span class="peer-tag">Speaking</span></div>
+      <a class="peer-link" href="https://www.linkedin.com/in/shephyken/" target="_blank">↗ linkedin.com/in/shephyken</a>
+    </div>
+  </div>
+  <div class="peers-note">
+    <p>These are leaders whose work sits at the same intersection of customer experience strategy, human-centered design, and measurable business impact. I follow their thinking and contribute to the broader conversation about where experience management is heading — particularly at the intersection of AI and human-centered CX design.</p>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" style="background:var(--cream);">
+  <div class="s-label">Education</div>
+  <h2 class="s-title">Global academic <em>foundations</em></h2>
+  <div class="edu-grid reveal">
+    <div class="edu-card">
+      <div class="edu-year">2014 — 2016</div>
+      <div class="edu-degree">MA — International Business &amp; Consulting / Strategic Management</div>
+      <div class="edu-school">Berlin School of Economics &amp; Law (HWR)</div>
+      <div class="edu-loc">Berlin, Germany</div>
+      <div class="edu-note">Live consulting projects with Deutsche Telekom M2M division (SCOR sustainability framework) and Öekotek Energiemanagement (international expansion strategy). Recommendations adopted by both client teams.</div>
+    </div>
+    <div class="edu-card">
+      <div class="edu-year">2014 — 2016</div>
+      <div class="edu-degree">MBA — International Business &amp; Operations / Supply Chain Management</div>
+      <div class="edu-school">Symbiosis Institute of International Business</div>
+      <div class="edu-loc">Pune, India</div>
+      <div class="edu-note">Dual degree pursued simultaneously with HWR Berlin — providing cross-cultural business immersion across Europe and Asia-Pacific with a strong operational and supply chain foundation.</div>
+    </div>
+    <div class="edu-card">
+      <div class="edu-year">2006 — 2010</div>
+      <div class="edu-degree">BE — Computer Science &amp; Engineering</div>
+      <div class="edu-school">Madhav Institute of Technology &amp; Science</div>
+      <div class="edu-loc">Gwalior, India</div>
+      <div class="edu-note">Technical foundation informing every platform architecture, AI governance, and CRM integration conversation — from RSA-256 encryption at Infosys to chatbot design at Aditya Birla and AI VoC tooling at DLL.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONSULTING -->
+<section class="consulting-section" id="consulting">
+  <div class="c-inner">
+    <div>
+      <div class="s-label">Consulting Practice</div>
+      <h2 class="s-title">Bringing <em>Signals → Systems → Scale™</em> to your organization</h2>
+      <div class="c-body">Currently available for select consulting engagements alongside VP/Director-level leadership search. I work with financial services, fintech, and enterprise technology organizations navigating CX transformation — where customer behavior, digital systems, and intelligent AI-enabled workflows must align to drive growth and trust.</div>
+      <a class="nav-cta" href="#contact">Start a Conversation →</a>
+    </div>
+    <div class="c-offer">
+      <div class="c-offer-title">Engagement Areas</div>
+      <div class="c-offer-item">VoC Program Design &amp; AI-Powered Implementation</div>
+      <div class="c-offer-item">Customer Journey Mapping &amp; Experience Architecture</div>
+      <div class="c-offer-item">Digital Adoption Strategy &amp; Channel Modernization</div>
+      <div class="c-offer-item">CX Governance &amp; Operating Model Design</div>
+      <div class="c-offer-item">Chatbot / AI Bot Governance &amp; Optimization</div>
+      <div class="c-offer-item">C-Suite CX Analytics &amp; Executive Dashboard Design</div>
+    </div>
+  </div>
+  <div class="c-timeline">
+    <div>
+      <div class="ct-label">Month 1 — Foundation</div>
+      <div class="ct-title">Build &amp; Position</div>
+      <ul class="ct-items">
+        <li>Portfolio live at ScaleWithSignals.com</li>
+        <li>LinkedIn profile updated</li>
+        <li>AI for Everyone course complete</li>
+        <li>First thought leadership posts published</li>
+        <li>Consulting intake form active</li>
+      </ul>
+    </div>
+    <div>
+      <div class="ct-label">Month 2 — Visibility</div>
+      <div class="ct-title">Publish &amp; Reach</div>
+      <ul class="ct-items">
+        <li>2 full case studies published</li>
+        <li>GenAI for Business Leaders complete</li>
+        <li>15 consulting outreach conversations</li>
+        <li>VP/Director applications active</li>
+        <li>LinkedIn engagement building</li>
+      </ul>
+    </div>
+    <div>
+      <div class="ct-label">Month 3 — Momentum</div>
+      <div class="ct-title">Convert &amp; Scale</div>
+      <ul class="ct-items">
+        <li>20+ thought leadership posts live</li>
+        <li>2–3 consulting discovery calls</li>
+        <li>VP/Director interviews in progress</li>
+        <li>First consulting deliverable</li>
+        <li>Medium / Substack article published</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="s-label">Contact</div>
+  <h2 class="s-title">Let's build something <em>meaningful</em></h2>
+  <div class="contact-grid reveal">
+    <div>
+      <div class="contact-body">Whether you are exploring a VP/Director leadership opportunity, a CX transformation consulting engagement, or simply want to exchange ideas on experience management and AI — I welcome the conversation. Based in Irvine, California. Available for US-based roles, global remote positions, and select international consulting travel.</div>
+      <div class="contact-links">
+        <a class="contact-link" href="mailto:abhishek.230287@gmail.com">
+          <div class="cl-icon">✉</div>
+          <div class="cl-text"><strong>abhishek.230287@gmail.com</strong><span>Primary — responses within 24 hours</span></div>
+        </a>
+        <a class="contact-link" href="tel:+12178197619">
+          <div class="cl-icon">☎</div>
+          <div class="cl-text"><strong>+1 (217) 819-7619</strong><span>Irvine, CA — Pacific Time</span></div>
+        </a>
+        <a class="contact-link" href="https://www.linkedin.com/in/abhisheksharma13" target="_blank">
+          <div class="cl-icon">in</div>
+          <div class="cl-text"><strong>linkedin.com/in/abhisheksharma13</strong><span>Connect and follow thought leadership content</span></div>
+        </a>
+      </div>
+    </div>
+    <div class="contact-form">
+      <h3>Send a Message</h3>
+      <div class="ff"><label>Your Name</label><input type="text" id="cf-name" placeholder="Jane Smith" /></div>
+      <div class="ff"><label>Organization</label><input type="text" id="cf-org" placeholder="Company or Firm" /></div>
+      <div class="ff">
+        <label>Nature of Inquiry</label>
+        <select id="cf-type">
+          <option value="">Select one...</option>
+          <option>VP/Director Leadership Opportunity</option>
+          <option>CX Consulting Engagement</option>
+          <option>Speaking / Advisory</option>
+          <option>General Connection</option>
+        </select>
+      </div>
+      <div class="ff"><label>Message</label><textarea id="cf-msg" placeholder="Tell me about the challenge you're working on..."></textarea></div>
+      <button class="btn-send" onclick="sendMessage()">Send Message →</button>
+      <div class="form-success" id="form-success">Message sent — thank you. I will respond within 24 hours.</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">Scale With <span>Signals</span>.</div>
+  <div class="footer-copy">&#169; 2026 Abhishek Sharma &middot; ScaleWithSignals.com &middot; Irvine, CA</div>
+  <div class="footer-links">
+    <a href="#about">About</a>
+    <a href="#framework">Framework</a>
+    <a href="#cases">Work</a>
+    <a href="#ai">AI</a>
+    <a href="#contact">Contact</a>
+  </div>
+</footer>
+
+<script>
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  reveals.forEach(el => io.observe(el));
+
+  // Active nav highlight on scroll
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) current = s.id; });
+    navLinks.forEach(a => { a.style.color = a.getAttribute('href') === '#' + current ? 'var(--gold)' : ''; });
+  });
+
+  // Contact form — opens mail client with pre-filled content
+  // Replace the mailto with your Formspree endpoint once set up:
+  // fetch('https://formspree.io/f/YOUR_ID', { method:'POST', body: formData })
+  function sendMessage() {
+    var name = document.getElementById('cf-name').value.trim();
+    var org = document.getElementById('cf-org').value.trim();
+    var type = document.getElementById('cf-type').value;
+    var msg = document.getElementById('cf-msg').value.trim();
+    if (!name || !msg) {
+      alert('Please enter your name and message before sending.');
+      return;
+    }
+    var subject = encodeURIComponent('Portfolio Inquiry' + (type ? ' — ' + type : ''));
+    var body = encodeURIComponent(
+      'Name: ' + name + '\n' +
+      'Organization: ' + (org || 'Not specified') + '\n' +
+      'Inquiry: ' + (type || 'Not specified') + '\n\n' +
+      'Message:\n' + msg
+    );
+    window.location.href = 'mailto:abhishek.230287@gmail.com?subject=' + subject + '&body=' + body;
+    document.getElementById('form-success').style.display = 'block';
+  }
+</script>
+</body>
+</html>
