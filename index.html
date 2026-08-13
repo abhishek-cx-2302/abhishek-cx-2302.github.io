@@ -259,6 +259,30 @@
   .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
   .reveal.visible { opacity: 1; transform: none; }
 
+  /* FIELD NOTES */
+  .fn-section { background: var(--cream); }
+  .fn-intro { font-size: 1rem; color: var(--steel); line-height: 1.8; max-width: 640px; margin-bottom: 3.5rem; }
+  .fn-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+  .fn-card { background: white; padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 420px; transition: background 0.25s; }
+  .fn-card:hover { background: var(--ink); }
+  .fn-card:hover .fn-title, .fn-card:hover .fn-body, .fn-card:hover .fn-meta { color: rgba(247,245,240,0.85); }
+  .fn-card:hover .fn-series { background: rgba(184,149,58,0.2); color: var(--gold-light); border-color: transparent; }
+  .fn-card:hover .fn-read { color: var(--gold-light); }
+  .fn-card:hover .fn-divider { border-color: rgba(255,255,255,0.1); }
+  .fn-series { display: inline-block; font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; background: var(--cream); border: 1px solid var(--rule); color: var(--mist); padding: 0.25rem 0.6rem; margin-bottom: 1.2rem; transition: all 0.25s; }
+  .fn-title { font-family: var(--serif); font-size: 1.2rem; font-weight: 600; color: var(--ink); line-height: 1.35; margin-bottom: 0.5rem; transition: color 0.25s; }
+  .fn-meta { font-family: var(--mono); font-size: 0.6rem; color: var(--mist); letter-spacing: 0.06em; margin-bottom: 1rem; transition: color 0.25s; }
+  .fn-body { font-size: 0.83rem; color: var(--steel); line-height: 1.65; flex: 1; transition: color 0.25s; }
+  .fn-divider { border: none; border-top: 1px solid var(--rule); margin: 1.5rem 0; transition: border-color 0.25s; }
+  .fn-footer { display: flex; justify-content: space-between; align-items: flex-end; gap: 1rem; }
+  .fn-lesson { font-family: var(--serif); font-size: 0.82rem; font-style: italic; color: var(--gold); line-height: 1.4; flex: 1; }
+  .fn-read { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mist); text-decoration: none; white-space: nowrap; transition: color 0.25s; }
+  .fn-read:hover { color: var(--gold); }
+  .fn-dark { background: var(--ink); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; gap: 1.5rem; padding: 2.5rem; min-height: 420px; }
+  .fn-soon { background: rgba(237,233,224,0.5); opacity: 0.75; }
+  .fn-cta-row { margin-top: 3rem; display: flex; align-items: center; gap: 2rem; padding-top: 2.5rem; border-top: 1px solid var(--rule); }
+  .fn-cta-text { font-size: 0.9rem; color: var(--steel); line-height: 1.65; }
+
   /* RESPONSIVE */
   @media (max-width: 900px) {
     nav { padding: 1rem 2rem; }
@@ -268,7 +292,7 @@
     .hero-right { height: 300px; }
     section { padding: 4rem 2rem; }
     .two-col, .contact-grid, .skills-grid { grid-template-columns: 1fr; gap: 3rem; }
-    .fw-grid, .cases-grid, .peers-grid, .edu-grid { grid-template-columns: 1fr; }
+    .fw-grid, .cases-grid, .peers-grid, .edu-grid, .fn-grid { grid-template-columns: 1fr; }
     .fw-outcomes, .c-timeline { grid-template-columns: repeat(2, 1fr); }
     .c-inner { grid-template-columns: 1fr; }
     .exp-item { grid-template-columns: 1fr; gap: 1rem; }
@@ -286,6 +310,7 @@
     <li><a href="#framework">Framework</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#cases">Case Studies</a></li>
+    <li><a href="#fieldnotes">Field Notes</a></li>
     <li><a href="#ai">AI &amp; Tools</a></li>
     <li><a href="#consulting">Consulting</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -575,6 +600,108 @@
     </div>
   </div>
   <p style="margin-top:2rem; font-family:var(--mono); font-size:0.65rem; color:var(--mist); letter-spacing:0.1em; text-align:center; text-transform:uppercase;">→ Detailed case study write-ups available on request. <a href="#contact" style="color:var(--gold); text-decoration:none;">Contact me</a> to discuss any engagement.</p>
+</section>
+
+<!-- FIELD NOTES -->
+<section id="fieldnotes" class="fn-section">
+  <div class="s-label">Field Notes</div>
+  <h2 class="s-title">CX observations from <em>everyday life</em></h2>
+  <p class="fn-intro">I notice customer experience everywhere — in a coffee shop, a pharmacy queue, an app notification, a chatbot loop. These are practitioner reflections drawn from real moments. Not case studies. Not essays. Observations that reveal how experience is built or broken in the small decisions organisations make every day.</p>
+
+  <div class="fn-grid reveal">
+
+    <div class="fn-card">
+      <div>
+        <div class="fn-series">Experience Diaries</div>
+        <div class="fn-title">The Smile That Brought Me Back</div>
+        <div class="fn-meta">July 2026 &nbsp;·&nbsp; Retail &amp; F&amp;B &nbsp;·&nbsp; Starbucks / Kroger</div>
+        <div class="fn-body">A Starbucks server inside a Kroger heard a dad in a hurry with a six year old who wanted hot chocolate. No script. No upsell. Just a three-second decision that turned a routine stop into a memory. On the culture shift happening inside Starbucks — and what it means when permission to be human reaches the front line.</div>
+      </div>
+      <div>
+        <hr class="fn-divider"/>
+        <div class="fn-footer">
+          <div class="fn-lesson">"Culture is not a strategy deck. It is what happens when nobody is watching."</div>
+          <a class="fn-read" href="https://www.linkedin.com/in/abhisheksharma13" target="_blank">Read ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="fn-card">
+      <div>
+        <div class="fn-series">Experience Diaries</div>
+        <div class="fn-title">Same Product. Same Price. Completely Different Experience.</div>
+        <div class="fn-meta">July 2026 &nbsp;·&nbsp; Retail &nbsp;·&nbsp; Walmart vs Walgreens</div>
+        <div class="fn-body">Two magnetic photo prints. Under $10. One order at Walmart, one at Walgreens — same photo, same day. What followed over four days became one of the clearest CX lessons in a while. On broken machines, chatbots that block customers while humans call to deliver bad news, and why it is better to do fewer things well than many things unreliably.</div>
+      </div>
+      <div>
+        <hr class="fn-divider"/>
+        <div class="fn-footer">
+          <div class="fn-lesson">"A broken promise leaves a stronger memory than a smooth transaction."</div>
+          <a class="fn-read" href="https://www.linkedin.com/in/abhisheksharma13" target="_blank">Read ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="fn-card">
+      <div>
+        <div class="fn-series">Experience Diaries</div>
+        <div class="fn-title">AI Is Saving Companies Time. But Whose Time Is It?</div>
+        <div class="fn-meta">July 2026 &nbsp;·&nbsp; AI &amp; Work &nbsp;·&nbsp; Member Experience</div>
+        <div class="fn-body">Three things stayed with me: good people laid off behind the word restructuring. Members posting AI wins while quietly terrified of falling behind. A friend whose AI license gets revoked if he falls short of usage benchmarks. On what happens to the humans inside an organisation when AI arrives — and why measuring only output misses the most important signal of all.</div>
+      </div>
+      <div>
+        <hr class="fn-divider"/>
+        <div class="fn-footer">
+          <div class="fn-lesson">"AI saving company time without returning any to the member is efficiency without empathy."</div>
+          <a class="fn-read" href="https://www.linkedin.com/in/abhisheksharma13" target="_blank">Read ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="fn-card">
+      <div>
+        <div class="fn-series">CX Practitioner Notes</div>
+        <div class="fn-title">The Dashboard That Looked Fine</div>
+        <div class="fn-meta">March 2026 &nbsp;·&nbsp; Financial Services &nbsp;·&nbsp; VoC Strategy</div>
+        <div class="fn-body">At Aditya Birla Finance, the Voice of Customer program looked healthy on every report. Surveys running. Response rates solid. But satisfaction was not moving — quarter after quarter. The problem was not the data. It was the three signals we were not reading: behavioral, operational, and silence. How this became the foundation of Signals → Systems → Scale™.</div>
+      </div>
+      <div>
+        <hr class="fn-divider"/>
+        <div class="fn-footer">
+          <div class="fn-lesson">"The signal is never the problem. It is always the interpretation."</div>
+          <a class="fn-read" href="https://www.linkedin.com/in/abhisheksharma13" target="_blank">Read ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="fn-card fn-soon">
+      <div>
+        <div class="fn-series">Experience Diaries</div>
+        <div class="fn-title" style="color:var(--mist);">Next entry coming soon</div>
+        <div class="fn-meta">Publishing regularly on LinkedIn</div>
+        <div class="fn-body" style="color:var(--mist);">New field notes are published on LinkedIn and added here as they go live. Follow along at linkedin.com/in/abhisheksharma13 to read them as they are published.</div>
+      </div>
+      <div>
+        <hr class="fn-divider"/>
+        <div class="fn-footer">
+          <div class="fn-lesson" style="color:var(--mist);">"Every interaction is a signal. Every signal is a lesson."</div>
+          <a class="fn-read" href="https://www.linkedin.com/in/abhisheksharma13" target="_blank">Follow ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="fn-dark">
+      <div style="font-family:var(--serif); font-size:2.5rem; font-weight:300; color:var(--gold); margin-bottom:0.5rem;">✦</div>
+      <div style="font-family:var(--serif); font-size:1.2rem; font-weight:300; color:var(--paper); line-height:1.6; margin-bottom:1.5rem;">All writing, observations and practitioner notes live on LinkedIn</div>
+      <a href="https://www.linkedin.com/in/abhisheksharma13" target="_blank" class="nav-cta" style="background:transparent; border:1px solid rgba(184,149,58,0.5); color:var(--gold-light);">Read All Field Notes ↗</a>
+    </div>
+
+  </div>
+
+  <div class="fn-cta-row">
+    <div class="fn-cta-text">New field notes are added here as they are published. If a specific observation sparked a thought you want to share — I would love to hear from you.</div>
+    <a href="#contact" class="nav-cta" style="flex-shrink:0;">Start a Conversation</a>
+  </div>
 </section>
 
 <!-- AI & TOOLS -->
