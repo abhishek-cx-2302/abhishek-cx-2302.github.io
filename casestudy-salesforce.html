@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Before You Deploy Agentforce, Fix the Foundation | ScaleWithSignals.com</title>
+<meta name="description" content="A CX practitioner's perspective on why clean data, aligned people, and incremental wins matter more than the AI tool you choose. A case study on Salesforce, MDM, and the real conditions for Customer 360."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --ink: #0d0d0d; --paper: #f7f5f0; --cream: #ede9e0;
+    --gold: #b8953a; --gold-light: #d4af6a; --steel: #3a4a5c;
+    --mist: #8a9aaa; --rule: rgba(13,13,13,0.10);
+    --serif: "Cormorant Garamond", Georgia, serif;
+    --sans: "DM Sans", sans-serif; --mono: "DM Mono", monospace;
+    --max: 740px;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 17px; line-height: 1.75; overflow-x: hidden; }
+
+  /* NAV */
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 4rem; background: rgba(247,245,240,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--rule); }
+  .nav-logo { font-family: var(--serif); font-size: 1.05rem; font-weight: 600; color: var(--ink); text-decoration: none; }
+  .nav-logo span { color: var(--gold); }
+  .nav-back { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--steel); text-decoration: none; transition: color 0.2s; }
+  .nav-back:hover { color: var(--gold); }
+
+  /* HERO */
+  .article-hero { padding: 9rem 2rem 5rem; max-width: var(--max); margin: 0 auto; }
+  .article-series { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1.5rem; }
+  .article-series::before { content: ""; display: block; width: 24px; height: 1px; background: var(--gold); }
+  .article-title { font-family: var(--serif); font-size: clamp(2.2rem, 5vw, 3.2rem); font-weight: 300; line-height: 1.1; color: var(--ink); margin-bottom: 1.2rem; }
+  .article-title em { font-style: italic; color: var(--gold); }
+  .article-sub { font-family: var(--serif); font-size: 1.2rem; font-weight: 300; color: var(--steel); line-height: 1.55; margin-bottom: 2rem; }
+  .article-meta { display: flex; gap: 2rem; font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.1em; color: var(--mist); text-transform: uppercase; padding-top: 1.5rem; border-top: 1px solid var(--rule); }
+
+  /* BODY */
+  .article-body { max-width: var(--max); margin: 0 auto; padding: 0 2rem 6rem; }
+  .article-body p { margin-bottom: 1.5rem; color: var(--steel); line-height: 1.8; }
+  .article-body p:first-of-type { font-size: 1.1rem; color: var(--ink); }
+
+  /* SECTION HEADERS */
+  .layer { margin: 4rem 0 1.5rem; }
+  .layer-num { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+  .layer-title { font-family: var(--serif); font-size: 1.7rem; font-weight: 600; color: var(--ink); line-height: 1.2; }
+  .layer-title em { font-style: italic; color: var(--gold); }
+
+  /* PULL QUOTE */
+  .pull { font-family: var(--serif); font-size: 1.35rem; font-weight: 300; font-style: italic; color: var(--ink); line-height: 1.55; padding: 2rem 0 2rem 2rem; border-left: 2px solid var(--gold); margin: 2.5rem 0; }
+
+  /* CALLOUT BOX */
+  .callout { background: var(--ink); color: var(--paper); padding: 2rem 2.5rem; margin: 2.5rem 0; }
+  .callout-label { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 1rem; }
+  .callout p { color: rgba(247,245,240,0.8); font-size: 0.95rem; line-height: 1.7; margin-bottom: 0.8rem; }
+  .callout p:last-child { margin-bottom: 0; }
+  .callout strong { color: var(--gold-light); }
+
+  /* DATA POINT */
+  .datapoint { background: var(--cream); padding: 1.5rem 2rem; margin: 2rem 0; border-left: 3px solid var(--gold); }
+  .datapoint-num { font-family: var(--serif); font-size: 2rem; font-weight: 600; color: var(--gold); line-height: 1; margin-bottom: 0.3rem; }
+  .datapoint-text { font-size: 0.88rem; color: var(--steel); line-height: 1.5; }
+  .datapoint-source { font-family: var(--mono); font-size: 0.6rem; color: var(--mist); margin-top: 0.4rem; letter-spacing: 0.06em; }
+
+  /* PEOPLE GRID */
+  .people-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; margin: 2rem 0; }
+  .person-card { background: var(--cream); padding: 1.5rem; }
+  .person-role { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+  .person-what { font-size: 0.88rem; font-weight: 500; color: var(--ink); margin-bottom: 0.3rem; }
+  .person-why { font-size: 0.8rem; color: var(--mist); line-height: 1.5; }
+
+  /* AGILE STEPS */
+  .agile-steps { display: flex; flex-direction: column; gap: 2px; margin: 2rem 0; }
+  .agile-step { display: grid; grid-template-columns: 48px 1fr; gap: 1rem; background: var(--cream); padding: 1.2rem 1.5rem; align-items: flex-start; }
+  .step-n { font-family: var(--serif); font-size: 1.8rem; font-weight: 300; color: rgba(184,149,58,0.4); line-height: 1; }
+  .step-title { font-size: 0.9rem; font-weight: 500; color: var(--ink); margin-bottom: 0.2rem; }
+  .step-desc { font-size: 0.8rem; color: var(--mist); line-height: 1.5; }
+
+  /* CX BUS */
+  .cx-bus { background: var(--steel); color: var(--paper); padding: 2.5rem; margin: 2.5rem 0; }
+  .cx-bus-title { font-family: var(--serif); font-size: 1.3rem; font-weight: 300; color: var(--paper); margin-bottom: 1rem; }
+  .cx-bus-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.5rem; }
+  .cx-bus-item { text-align: center; padding: 1rem; background: rgba(255,255,255,0.06); }
+  .cx-bus-icon { font-size: 1.4rem; margin-bottom: 0.4rem; }
+  .cx-bus-label { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 0.3rem; }
+  .cx-bus-desc { font-size: 0.78rem; color: rgba(247,245,240,0.65); line-height: 1.45; }
+
+  /* CLOSING */
+  .article-close { max-width: var(--max); margin: 0 auto; padding: 0 2rem 6rem; }
+  .close-line { font-family: var(--serif); font-size: 1.5rem; font-weight: 300; font-style: italic; color: var(--ink); line-height: 1.5; padding: 2rem; background: var(--cream); border-left: 2px solid var(--gold); margin-bottom: 2rem; }
+  .author-note { font-family: var(--mono); font-size: 0.68rem; color: var(--mist); letter-spacing: 0.08em; line-height: 1.6; padding-top: 2rem; border-top: 1px solid var(--rule); }
+  .back-link { display: inline-flex; align-items: center; gap: 0.5rem; font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--steel); text-decoration: none; margin-top: 2rem; transition: color 0.2s; }
+  .back-link:hover { color: var(--gold); }
+
+  @media (max-width: 700px) {
+    nav { padding: 1rem 1.5rem; }
+    .article-hero, .article-body, .article-close { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .people-grid, .cx-bus-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="https://scalewithsignals.com">Scale With <span>Signals</span>.</a>
+  <a class="nav-back" href="https://scalewithsignals.com#fieldnotes">← Field Notes</a>
+</nav>
+
+<div class="article-hero">
+  <div class="article-series">Case Study &nbsp;·&nbsp; CX &amp; Enterprise Systems</div>
+  <h1 class="article-title">Before You Deploy Agentforce,<br/><em>Fix the Foundation</em></h1>
+  <p class="article-sub">Why the biggest barrier to Customer 360 and AI-powered CX is not the technology you choose — it is the conditions you build it on. A practitioner's perspective on data, people, agile delivery, and the role CX plays in connecting it all.</p>
+  <div class="article-meta">
+    <span>Abhishek Sharma</span>
+    <span>August 2026</span>
+    <span>CX Strategy &amp; Enterprise Systems</span>
+    <span>~1,100 words</span>
+  </div>
+</div>
+
+<div class="article-body">
+
+  <p>Salesforce is one of the most powerful CRM platforms ever built. Hundreds of thousands of organizations run their customer operations on it. And yet, consistently, across industries and geographies, a pattern repeats: organizations deploy Salesforce, invest significantly, and still cannot produce a reliable Customer 360 view. They still cannot connect the dots between what a customer did last week, what they need today, and what the business should do next.</p>
+
+  <p>This is not a Salesforce problem. It is a foundation problem. And understanding that distinction is, in my view, one of the most important things a CX practitioner can contribute to an enterprise technology programme.</p>
+
+  <div class="layer">
+    <div class="layer-num">Layer 01 &nbsp;·&nbsp; The Data Foundation</div>
+    <div class="layer-title">The CRM is only as good<br/>as <em>what flows into it</em></div>
+  </div>
+
+  <p>The premise of Customer 360 is simple: every team that touches a customer — sales, service, marketing, operations — works from the same complete, accurate picture. In practice, most organizations are nowhere near this. Customer data lives in multiple systems: a legacy ERP, a service platform, a billing database, a marketing tool, a spreadsheet maintained by one person in a department nobody talks to.</p>
+
+  <p>When these systems are not governed, records duplicate. Fields are populated inconsistently. The same customer appears three times under three different spellings of their company name. A service agent in one geography cannot see the account history visible to a sales rep in another.</p>
+
+  <div class="datapoint">
+    <div class="datapoint-num">$12.9M</div>
+    <div class="datapoint-text">Average annual cost of poor data quality per organization — Gartner estimates that poor data quality costs organizations an average of $12.9 million per year, with downstream effects reaching billing errors, failed CRM reporting, poor analytics, and manual reconciliation that consumes skilled resource time.</div>
+    <div class="datapoint-source">Source: gartner.com · datamanagement research 2024</div>
+  </div>
+
+  <p>This is where Master Data Management becomes critical. MDM is the discipline — and the technology — that governs how master records are defined, cleaned, deduplicated, and maintained across systems. Without it, no CRM platform, however sophisticated, can deliver a true unified view.</p>
+
+  <p>The most widely deployed MDM platforms in enterprise environments include Informatica (now part of the Salesforce ecosystem following its 2025 acquisition), Reltio, Stibo Systems, Semarchy, and IBM MDM — all recognized as Leaders in the 2026 Gartner Magic Quadrant for MDM. Each addresses the same fundamental challenge: ensuring that critical business data stays accurate, consistent, and reliable across every system that touches the customer.</p>
+
+  <div class="callout">
+    <div class="callout-label">The MDM Reality Most Organizations Face</div>
+    <p>MDM implementation is not a quick project. A full enterprise MDM deployment typically takes <strong>12 to 24 months</strong> — longer in regulated industries where data governance requirements add complexity at every stage. The selection process alone, from requirements to vendor decision, commonly takes 3 to 6 months. Implementation, data migration, reconciliation, and adoption can extend well beyond the initial timeline.</p>
+    <p>This is not a failure of the platforms. It reflects the genuine complexity of harmonizing data that has accumulated across years of organizational growth, system changes, and operational decisions made in silos. The organizations that navigate this well treat MDM not as an IT project but as a business transformation — with executive sponsorship, cross-functional ownership, and a clear connection to the customer outcomes they are trying to improve.</p>
+  </div>
+
+  <div class="layer">
+    <div class="layer-num">Layer 02 &nbsp;·&nbsp; The People and Skills Layer</div>
+    <div class="layer-title">The watch analogy —<br/><em>tools do not design masterpieces</em></div>
+  </div>
+
+  <p>Consider a mechanical watch. The engineering inside a masterpiece timepiece — the gears, the escapement, the balance wheel working together in a space smaller than a coin — is a product not of tools alone, but of exceptional craft applied through the right tools. Salesforce is, in this analogy, the watchmaker's bench. Powerful, precise, capable of extraordinary outcomes. But the bench does not design the watch. The people do.</p>
+
+  <p>The most consistent failure pattern in enterprise CRM and chatbot programmes is not technology selection. It is the assumption that a programme manager or project manager can carry the full weight of design, system logic, business process, and stakeholder alignment simultaneously. Programme managers are essential — but they coordinate; they do not design the mechanism. What is needed is a carefully aligned set of professionals, each fluent in their domain and genuinely connected to the others.</p>
+
+  <div class="people-grid">
+    <div class="person-card">
+      <div class="person-role">Business Analyst</div>
+      <div class="person-what">The most undervalued role in CRM transformation</div>
+      <div class="person-why">Translates customer journey requirements into system logic. The bridge between what the business needs and what the platform can do. Without this role done well, chatbot dialogues are guesswork and CRM workflows serve the system, not the customer.</div>
+    </div>
+    <div class="person-card">
+      <div class="person-role">Salesforce Admin</div>
+      <div class="person-what">Governance without bottleneck</div>
+      <div class="person-why">Owns configuration, permissions, and data architecture within the platform. The difference between an Admin who governs and one who gatekeeps is the difference between a CRM that evolves and one that stagnates.</div>
+    </div>
+    <div class="person-card">
+      <div class="person-role">Developer / Engineer</div>
+      <div class="person-what">Builds what the BA specifies</div>
+      <div class="person-why">Custom flows, Apex logic, integrations to external systems. Only effective when working from clear, well-scoped requirements — not from vague briefs interpreted on the fly.</div>
+    </div>
+    <div class="person-card">
+      <div class="person-role">CX Practitioner</div>
+      <div class="person-what">The human outcome in the room</div>
+      <div class="person-why">Ensures that every system decision — every workflow, every chatbot intent, every data field — is evaluated against its impact on the customer and the person serving them. More on this role below.</div>
+    </div>
+  </div>
+
+  <p>These roles, working in alignment, are what makes a CRM transformation produce customer outcomes rather than just system deliverables. The investment in skilled, domain-fluent professionals is not overhead. It is the foundation on which everything else is built.</p>
+
+  <div class="layer">
+    <div class="layer-num">Layer 03 &nbsp;·&nbsp; The Delivery Approach</div>
+    <div class="layer-title">Small wins are not<br/><em>compromise — they are strategy</em></div>
+  </div>
+
+  <p>Enterprise CRM programmes fail most often not because the technology is wrong or the ambition is absent, but because organizations attempt to build everything at once. Full omnichannel. Complete Customer 360. End-to-end automation. All simultaneously. In a system that is not yet clean, with a team that is still learning, on a timeline that does not allow for iteration.</p>
+
+  <p>The Agile methodology — which most organizations now claim to follow — exists precisely to challenge this instinct. Start small. Prove value. Build confidence. Iterate. In the context of CX and CRM delivery, this translates directly into a sequenced approach that generates momentum rather than waiting for a perfect state that rarely arrives.</p>
+
+  <div class="agile-steps">
+    <div class="agile-step">
+      <div class="step-n">01</div>
+      <div>
+        <div class="step-title">Update chatbot dialogue and intent mapping</div>
+        <div class="step-desc">The smallest visible improvement with direct customer impact. A bot that understands more intents deflects more effectively and frustrates fewer customers. Measurable in days, not months.</div>
+      </div>
+    </div>
+    <div class="agile-step">
+      <div class="step-n">02</div>
+      <div>
+        <div class="step-title">Connect one high-volume journey to Salesforce</div>
+        <div class="step-desc">A quick quote, an application, an onboarding trigger. One journey, end to end, in the CRM. Proves the integration works, trains the team, and shows the business what connected data looks like in practice.</div>
+      </div>
+    </div>
+    <div class="agile-step">
+      <div class="step-n">03</div>
+      <div>
+        <div class="step-title">Improve portal UI for the most common task</div>
+        <div class="step-desc">What do customers try to do most often? Make that easier. Reduce clicks. Surface the right information at the right moment. Small UX improvements generate measurable satisfaction gains faster than any backend project.</div>
+      </div>
+    </div>
+    <div class="agile-step">
+      <div class="step-n">04</div>
+      <div>
+        <div class="step-title">Train sales teams on CRM as a workflow, not a database</div>
+        <div class="step-desc">Adoption is the biggest predictor of CRM success. Sales teams who understand why the process lives in Salesforce — not just how — populate it accurately. Accurate data compounds every downstream improvement.</div>
+      </div>
+    </div>
+  </div>
+
+  <p>Each of these wins is modest in isolation. Together, they build the clean data, trained team, and proven integrations that make more ambitious programmes possible. And critically, they build the organizational confidence that sustains long-term transformation.</p>
+
+  <div class="layer">
+    <div class="layer-num">Layer 04 &nbsp;·&nbsp; The AI Readiness Question</div>
+    <div class="layer-title">Is Agentforce premature<br/>in <em>an unready system?</em></div>
+  </div>
+
+  <p>Agentforce represents Salesforce's most significant AI investment — autonomous agents that act on behalf of sales, service, and marketing teams using the data and workflows inside the Salesforce platform. The capability is genuinely compelling. But the question worth asking before deployment is not "what can Agentforce do?" It is: "what will Agentforce read from?"</p>
+
+  <div class="callout">
+    <div class="callout-label">The Uncomfortable Truth About AI on Broken Foundations</div>
+    <p>Bad data does not produce slightly worse AI results. It produces <strong>confidently wrong recommendations</strong>. An AI agent reading duplicate customer records, incomplete account histories, and inconsistently populated fields will act on that information — at scale, at speed, and without the human hesitation that might catch the error before it reaches a customer.</p>
+    <p>Agentforce readiness, as one implementation specialist put it, must be judged by <strong>the quality of the commercial system it is entering</strong> — not by whether the agent can technically be switched on. The sequence matters: clean data first, unified customer profile second, AI agents on top. Inverting that sequence accelerates the visibility of every existing problem rather than solving them.</p>
+  </div>
+
+  <p>For organizations whose focus is rightly on achieving omnichannel consistency and a reliable Customer 360 view, this is not a reason to avoid AI. It is a reason to sequence correctly. The foundation work — data governance, MDM, people alignment, incremental delivery — is not a delay on the path to AI. It is the path.</p>
+
+  <div class="layer">
+    <div class="layer-num">Layer 05 &nbsp;·&nbsp; The CX Thread</div>
+    <div class="layer-title">CX as the bus —<br/><em>connecting every layer</em></div>
+  </div>
+
+  <p>In a computer's architecture, the bus is the communication system that connects the processor, memory, storage, and input/output devices. Remove the bus and each component still exists — but they cannot exchange information, cannot coordinate, cannot function as a system. They are parts without a whole.</p>
+
+  <p>CX plays exactly this role in a digital transformation programme. Not as the most technical layer. Not as the programme manager. But as the connective tissue that ensures every decision — data, system, people, delivery — is evaluated against a single consistent question: does this serve the customer?</p>
+
+  <div class="cx-bus">
+    <div class="cx-bus-title">What CX connects across the transformation</div>
+    <div class="cx-bus-grid">
+      <div class="cx-bus-item">
+        <div class="cx-bus-icon">📡</div>
+        <div class="cx-bus-label">Signals</div>
+        <div class="cx-bus-desc">Reads VoC, NPS, and operational data to identify where the customer experience is breaking — and which system failure is causing it.</div>
+      </div>
+      <div class="cx-bus-item">
+        <div class="cx-bus-icon">🔗</div>
+        <div class="cx-bus-label">Stakeholders</div>
+        <div class="cx-bus-desc">Translates between IT priorities, business priorities, and customer priorities. Holds the human outcome in the room when technical decisions crowd it out.</div>
+      </div>
+      <div class="cx-bus-item">
+        <div class="cx-bus-icon">📊</div>
+        <div class="cx-bus-label">Outcomes</div>
+        <div class="cx-bus-desc">Measures the result of every system, data, and people decision in the language that matters — CSAT, resolution time, adoption, trust.</div>
+      </div>
+    </div>
+  </div>
+
+  <p>A CX practitioner in a digital transformation programme is not the person who configures Salesforce. They are the person who asks: when a sales rep looks at this customer record, does it tell them what they need to serve that customer well? When a chatbot handles this intent, does the response earn trust or erode it? When we prioritize this sprint, are we building toward the customer outcome or toward the system milestone?</p>
+
+  <p>These are not soft questions. They are the questions that determine whether the technology investment produces a customer experience or merely a functioning platform. And they require someone in the room whose primary accountability is the experience — not the architecture, not the delivery timeline, not the budget line.</p>
+
+  <p>In network terms: every device on the LAN can be high-performing. Without the right network design, they cannot reliably communicate. CX is the network design.</p>
+
+</div>
+
+<div class="article-close">
+  <div class="close-line">"The question is never which tool to deploy. It is always: are the conditions right for this tool to serve the people it is supposed to serve? Fix the foundation. Align the people. Win incrementally. Then the technology will do what it promises."</div>
+
+  <p style="color:var(--steel); line-height:1.8; margin-bottom:1.5rem;">This is the thinking I bring to every CX and digital transformation engagement — connecting the technical, operational, and human layers of a programme into a coherent direction. If this raises questions relevant to your organization, I would welcome the conversation.</p>
+
+  <div class="author-note">
+    Written by Abhishek Sharma &nbsp;·&nbsp; CX Strategy &amp; Experience Transformation &nbsp;·&nbsp; scalewithsignals.com<br/>
+    Thoughts and frameworks are mine. Research assisted by AI tools — transparently, because it proves the point: AI amplifies human thinking. It does not replace it.
+  </div>
+
+  <a class="back-link" href="https://scalewithsignals.com#fieldnotes">← Back to Field Notes</a>
+</div>
+
+</body>
+</html>
